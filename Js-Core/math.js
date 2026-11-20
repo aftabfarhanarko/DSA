@@ -155,3 +155,35 @@ console.log("Cubet", cubet);
 // Question 16: Find the distance between two points.
 
 // Formula: √((x2 − x1)² + (y2 − y1)²)
+
+const x1 = 2 ;
+const x2 = 4 ;
+
+const y1 = 6;
+
+const y2 = 8
+const distance= Math.hypot(x1-x2 , y1-y2);
+console.log("Distance", distance);
+
+// Question 17: Find the average of numbers.
+const numbers = [23,34,45,56,67,68,77,79,89,90];
+
+const sum = numbers.reduce((total,num)=> total+num ,0);
+const average = sum / numbers.length;
+
+console.log("Average",average);
+
+
+// Question 20: Calculate the hypotenuse of a right triangle.
+const a = 3;
+const b = 4;
+
+const c = Math.sqrt(a ** 2 + b ** 2);
+
+console.log(c);
+
+// Output: 5
+
+
+// Level 3 – Advanced
+// Question 21: Find the second-largest unique number in an array.
