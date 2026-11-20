@@ -1,104 +1,104 @@
-// // 2. Math.round()
+// 2. Math.round()
 
-// console.log(Math.round(101.6));
-
-
-// // 3. Math.floor()
-
-// console.log(Math.floor(23.8));
+console.log(Math.round(101.6));
 
 
-// // 4. Math.ceil()
-// // Definition: Rounds a number up to the nearest integer.
+// 3. Math.floor()
 
-// console.log(Math.ceil(2.01));
-// console.log(Math.ceil(7.0002));
+console.log(Math.floor(23.8));
 
 
-// // 5. Math.trunc()
-// // Definition: Removes the decimal part of a number without rounding.
+// 4. Math.ceil()
+// Definition: Rounds a number up to the nearest integer.
 
-// console.log(Math.trunc(9.99999));
-// console.log(Math.trunc(-344.99999));
-
-// // B. Maximum and Minimum Methods
-// // 6. Math.max()
-// // Definition: Returns the largest number.
+console.log(Math.ceil(2.01));
+console.log(Math.ceil(7.0002));
 
 
-// console.log(Math.max(34,56,76,876,8,3,23,21,321,3,2,34,34));
-// console.log(Math.max(-34,-56,-76,-87,-98));
+// 5. Math.trunc()
+// Definition: Removes the decimal part of a number without rounding.
 
-// // 7. Math.min()
-// // Definition: Returns the smallest number.
+console.log(Math.trunc(9.99999));
+console.log(Math.trunc(-344.99999));
 
-// console.log(Math.min(56,67,67,56,2,331,3));
-// console.log(Math.min(10, 20, 30, 40)); // 10
-// console.log(Math.min(5, 100, 25));     // 5
-
-
-// // 8. Math.max() with Array
-
-// const array1 = [23,54,65,57,6,6,67,99]
-
-// console.log(Math.max(...array1));
-
-// // 9. Math.min() with Array
-
-// const arry2 = [45,56,5,6767,323,323];
-
-// console.log(Math.min
-//     (...arry2)
-// );
-
-// // C. Power and Square Root Methods
-// // 10. Math.pow()
-// // Definition: Returns a number raised to the power of another number.
-
-// console.log("Arko",Math.pow(3,5));
-// console.log(Math.pow(2, 3));  // 8
-// console.log(Math.pow(5, 2));  // 25
-// console.log(Math.pow(10, 3)); // 1000
+// B. Maximum and Minimum Methods
+// 6. Math.max()
+// Definition: Returns the largest number.
 
 
-// // 11. Math.sqrt()
-// // Definition: Returns the square root of a number.
+console.log(Math.max(34,56,76,876,8,3,23,21,321,3,2,34,34));
+console.log(Math.max(-34,-56,-76,-87,-98));
 
-// console.log(Math.sqrt(45) )
-// console.log(Math.sqrt(25));  // 5
-// console.log(Math.sqrt(64));  // 8
-// console.log(Math.sqrt(100)); // 10
+// 7. Math.min()
+// Definition: Returns the smallest number.
 
-// // 12. Math.cbrt()
-// // Definition: Returns the cube root of a number.
-
-// console.log(Math.cbrt(9));
-// console.log(Math.cbrt(8));    // 2
-// console.log(Math.cbrt(27));   // 3
-// console.log(Math.cbrt(125));  // 5
+console.log(Math.min(56,67,67,56,2,331,3));
+console.log(Math.min(10, 20, 30, 40)); // 10
+console.log(Math.min(5, 100, 25));     // 5
 
 
-// // 13. Math.hypot()
-// // Definition: Returns the square root of the sum of squares of its arguments.
+// 8. Math.max() with Array
 
-// console.log(Math.hypot(366,4));
-// console.log(Math.hypot(3, 4)); // 5
-// console.log(Math.hypot(5, 12)); // 13
+const array1 = [23,54,65,57,6,6,67,99]
+
+console.log(Math.max(...array1));
+
+// 9. Math.min() with Array
+
+const arry2 = [45,56,5,6767,323,323];
+
+console.log(Math.min
+    (...arry2)
+);
+
+// C. Power and Square Root Methods
+// 10. Math.pow()
+// Definition: Returns a number raised to the power of another number.
+
+console.log("Arko",Math.pow(3,5));
+console.log(Math.pow(2, 3));  // 8
+console.log(Math.pow(5, 2));  // 25
+console.log(Math.pow(10, 3)); // 1000
+
+
+// 11. Math.sqrt()
+// Definition: Returns the square root of a number.
+
+console.log(Math.sqrt(45) )
+console.log(Math.sqrt(25));  // 5
+console.log(Math.sqrt(64));  // 8
+console.log(Math.sqrt(100)); // 10
+
+// 12. Math.cbrt()
+// Definition: Returns the cube root of a number.
+
+console.log(Math.cbrt(9));
+console.log(Math.cbrt(8));    // 2
+console.log(Math.cbrt(27));   // 3
+console.log(Math.cbrt(125));  // 5
+
+
+// 13. Math.hypot()
+// Definition: Returns the square root of the sum of squares of its arguments.
+
+console.log(Math.hypot(366,4));
+console.log(Math.hypot(3, 4)); // 5
+console.log(Math.hypot(5, 12)); // 13
 
 
 
-// // D. Random Number Methods
-// // 14. Math.random()
-// // Definition: Returns a random decimal number between 0 (inclusive) and 1 (exclusive).
+// D. Random Number Methods
+// 14. Math.random()
+// Definition: Returns a random decimal number between 0 (inclusive) and 1 (exclusive).
 
-// console.log("Randem Number",Math.random());
+console.log("Randem Number",Math.random());
 
 
-// // 15. Random Integer (1–10)
+// 15. Random Integer (1–10)
 
-// const radn = Math.floor(Math.random() * 10) + 1;
+const radn = Math.floor(Math.random() * 10) + 1;
 
-// console.log(" Random Integer (1–10)", radn);
+console.log(" Random Integer (1–10)", radn);
 
 
 // Level 2 – Intermediate
@@ -187,3 +187,66 @@ console.log(c);
 
 // Level 3 – Advanced
 // Question 21: Find the second-largest unique number in an array.
+
+const number = [10, 50, 30, 80, 80, 20,89];
+
+const uniqueNumbers = [...new Set(number)];
+
+uniqueNumbers.sort((a, b) => b - a);
+
+console.log(uniqueNumbers[1]);
+
+// Output: 50
+
+// Question 22: Find the highest and lowest values.
+const numbe = [10, 5, 80, 20, 100, 2];
+
+const highest = Math.max(...numbe);
+const lowest = Math.min(...numbe);
+
+console.log("Highest:", highest);
+console.log("Lowest:", lowest);
+
+// Highest: 100
+// Lowest: 2
+
+// Question 23: Round a number to two decimal places.
+const price = 123.45678;
+
+const result = Math.round(price * 100) / 100;
+
+console.log(result);
+
+// Output: 123.46
+
+// 6. JavaScript Math Methods – Quick Revision Table
+// Method	কাজ
+// Math.abs()	Absolute value
+// Math.round()	Nearest integer
+// Math.floor()	Round down
+// Math.ceil()	Round up
+// Math.trunc()	Remove decimal
+// Math.max()	Largest number
+// Math.min()	Smallest number
+// Math.pow()	Power
+// Math.sqrt()	Square root
+// Math.cbrt()	Cube root
+// Math.random()	Random number
+// Math.sign()	Number sign
+// Math.hypot()	Hypotenuse
+// Math.sin()	Sine
+// Math.cos()	Cosine
+// Math.tan()	Tangent
+// Math.log()	Natural logarithm
+// Math.log10()	Log base 10
+// Math.log2()	Log base 2
+// Math.exp()	Exponential
+// Math.fround()	Float32 conversion
+// Math.imul()	32-bit multiplication
+// Math.clz32()	Leading zero bits
+// Math.atan()	Inverse tangent
+// Math.atan2()	Two-argument inverse tangent
+// Math.asin()	Inverse sine
+// Math.acos()	Inverse cosine
+// Math.expm1()	Exponential minus 1
+// Math.log1p()	Logarithm of 1 + x
