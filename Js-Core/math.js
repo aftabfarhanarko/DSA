@@ -1,3 +1,36 @@
+// 6. JavaScript Math Methods – Quick Revision Table
+// Method	কাজ
+// Math.abs()	Absolute value
+// Math.round()	Nearest integer
+// Math.floor()	Round down
+// Math.ceil()	Round up
+// Math.trunc()	Remove decimal
+// Math.max()	Largest number
+// Math.min()	Smallest number
+// Math.pow()	Power
+// Math.sqrt()	Square root
+// Math.cbrt()	Cube root
+// Math.random()	Random number
+// Math.sign()	Number sign
+// Math.hypot()	Hypotenuse
+// Math.sin()	Sine
+// Math.cos()	Cosine
+// Math.tan()	Tangent
+// Math.log()	Natural logarithm
+// Math.log10()	Log base 10
+// Math.log2()	Log base 2
+// Math.exp()	Exponential
+// Math.fround()	Float32 conversion
+// Math.imul()	32-bit multiplication
+// Math.clz32()	Leading zero bits
+// Math.atan()	Inverse tangent
+// Math.atan2()	Two-argument inverse tangent
+// Math.asin()	Inverse sine
+// Math.acos()	Inverse cosine
+// Math.expm1()	Exponential minus 1
+// Math.log1p()	Logarithm of 1 + x
+
+
 // 2. Math.round()
 
 console.log(Math.round(101.6));
@@ -238,7 +271,6 @@ const password = Math.floor(100000 + Math.random() * 90000);
 
 console.log(" 6 Digits Password", password);
 
-
 // Question 26: Calculate compound interest.
 // Formula: A = P(1 + r/n)^(nt)
 
@@ -250,23 +282,58 @@ console.log(" 6 Digits Password", password);
 const pricentenc = 10000;
 const rate = 0.5;
 const time = 1;
-const year = 2
+const year = 2;
 const amountsa = pricentenc * Math.pow(1 + rate / time, time * year);
 // Outputs: Amounts 22500.00
 
 console.log("Amounts", amountsa.toFixed(2));
 
+// Question 27: Calculate the volume of a sphere.
+// Formula: 4/3 × π × r³
+
+const reduice = 6;
+const vaule = (4 / 3 ) *  Math.PI * Math.pow(reduice, 3)
+
+console.log(Number(vaule.toFixed(4)));
+
+// Question 28: Find the distance between two points using Pythagoras.
+
+const ab = 6;
+const bc = 8;
+
+const resulta = Math.hypot(ab, bc);
+
+console.log(resulta);
+
+// Output: 10
+
+// Question 29: Convert degrees to radians.
+
+function degreesToRadians(degaree) {
+     return degaree * (Math.PI / 180)
+}
+console.log(degreesToRadians(180));
 
 
+// Question 30: Find the median of an array.
 
+function findMedian(numbers) {
+    const sorted = [...numbers].sort((a, b) => a - b);
 
+    const middle = Math.floor(sorted.length / 2);
 
+    if (sorted.length % 2 === 0) {
+        return (sorted[middle - 1] + sorted[middle]) / 2;
+    }
 
+    return sorted[middle];
+}
 
+console.log(findMedian([10, 20, 30, 40, 50]));
+// Output: 30
 
-
-
-
+console.log(findMedian([10, 20, 30, 40]));
+// Output: 25
 
 
 // Output: 123.46
