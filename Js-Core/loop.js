@@ -1,4 +1,4 @@
-var p = 3;
+var p = 5;
 
 if (p === null) {
   console.log("Cancel");
@@ -20,6 +20,31 @@ if (p === null) {
       console.log("MM");
     }
   }
-};
+}
+
+let number = 66;
+
+if (number === null) {
+  console.log("Invalid Number");
+} else {
+  for (let i = 1; i <= Math.floor(number / 2); i++) {
+    if (number % i === 0) {
+      console.log(i);
+    }
+  }
+}
 
 
+let modul  = 50;
+
+if(modul === null){
+    console.log("Not Valied");
+    
+}else{
+    for(let i = 2; i<= Math.floor(modul/2); i++){
+        if(modul % i === 0){
+            console.log(i);
+            
+        }
+    }
+}
