@@ -9,6 +9,7 @@ int main() {
 
     // Add element
     numbers.push_back(40);
+    numbers.push_back(60);
 
     // Remove last element
     numbers.pop_back();
