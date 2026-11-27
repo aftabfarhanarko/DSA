@@ -1,63 +1,85 @@
-// ১. Doubly Linked List-এর Node ক্লাস (৩টি অংশ)
 class Node {
   constructor(data) {
-    this.prev = null; // আগের নোডের ঠিকানা
-    this.data = data; // মূল ডেটা
-    this.next = null; // পরের নোডের ঠিকানা
+    this.data = data;
+    this.next = null;
   }
 }
 
-// ২. Doubly Linked List ক্লাস
-class DoublyLinkedList {
+class LinkedList {
   constructor() {
+    // ১. Empty Linked List (শুরুতে সব খালি)
     this.head = null;
     this.tail = null;
-    this.size = 0;
+    this.size = 0; // আকার শূন্য
   }
 
-  // লিস্টের শেষে নতুন ডেটা যোগ করা
-  append(data) {
+  // লিস্টটি খালি কি না তা চেক করার মেথড
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  // ২. Node Connection & Dynamic Size বৃদ্ধি (নতুন ডেটা যোগ)
+  add(data) {
     const newNode = new Node(data);
 
-    if (!this.head) {
+    if (this.isEmpty()) {
+      // লিস্ট খালি থাকলে প্রথম নোডটিই Head এবং Tail হবে
       this.head = newNode;
       this.tail = newNode;
     } else {
-      newNode.prev = this.tail; // নতুন নোডের পেছনে বর্তমান tail-কে যুক্ত করা
-      this.tail.next = newNode; // বর্তমান tail-এর সামনে নতুন নোড যুক্ত করা
-      this.tail = newNode;      // নতুন নোডকে tail বানানো
+      // আগের শেষ নোডের (tail) সাথে নতুন নোডের সংযোগ (Connection)
+      this.tail.next = newNode;
+      // নতুন নোডটিকেই এখন শেষ নোড (tail) হিসেবে সেট করা
+      this.tail = newNode;
     }
-    this.size++;
+
+    this.size++; // ডাইনামিকভাবে সাইজ ১ বাড়ল
   }
 
-  // সামনের দিক থেকে সব ডেটা দেখা (Head -> Tail)
-  printForward() {
-    let current = this.head;
-    const result = [];
-    while (current) {
-      result.push(current.data);
-      current = current.next;
+  // ৩. Dynamic Size হ্রাস (শুরু থেকে ডেটা বাদ দেওয়া)
+  removeFirst() {
+    if (this.isEmpty()) {
+      console.log("List is already empty!");
+      return null;
     }
-    console.log("Forward:", result.join(" <-> "));
-  }
 
-  // পেছনের দিক থেকে সব ডেটা দেখা (Tail -> Head)
-  printBackward() {
-    let current = this.tail;
-    const result = [];
-    while (current) {
-      result.push(current.data);
-      current = current.prev; // prev ব্যবহার করে উল্টো দিকে যাওয়া হচ্ছে
+    const removedData = this.head.data;
+    this.head = this.head.next; // সংযোগ পরিবর্তন করে পরের নোডকে Head বানানো হলো
+    this.size--; // ডাইনামিকভাবে সাইজ ১ কমল
+
+    // সব ডেটা ডিলিট হয়ে গেলে Tail-কেও null করে দিতে হবে
+    if (this.isEmpty()) {
+      this.tail = null;
     }
-    console.log("Backward:", result.join(" <-> "));
+
+    return removedData;
   }
 }
 
-// --- ব্যবহার করে দেখা যাক ---
-const browserHistory = new DoublyLinkedList();
-browserHistory.append("Google.com");
-browserHistory.append("YouTube.com");
-browserHistory.append("Facebook.com");
+// --- কোডটির ব্যবহার ও আউটপুট দেখা ---
 
-browserHistory.printForward();  // আউটপুট: Forward: Google.com <-> YouTube.com <-> Facebook.com
-browserHistory.printBackward(); // আউটপুট: Backward: Facebook.com <-> YouTube.com <-> Google.com
+const myList = new LinkedList();
+console.log("List Prient :", myList.isEmpty()); // true
+console.log("Size OF List in First : ", myList.size); // 0
+
+// নোড যোগ করা (Connection তৈরি হচ্ছে এবং Size বাড়ছে)
+myList.add("Dhaka");
+myList.add("Chittagong");
+myList.add("Sylhet");
+
+console.log("2 & 3 List Add to Size : ", myList.size); // 3
+console.log(
+  "Head ও Tail add :",
+  myList.head.data,
+  "->",
+  myList.head.next.data,
+  "->",
+  myList.tail.data,
+);
+// আউটপুট: Dhaka -> Chittagong -> Sylhet
+
+// একটি নোড বাদ দেওয়া (Dynamic ভাবে Size কমে যাবে)
+myList.removeFirst();
+myList.removeFirst()
+console.log("Removed List To One Element : ", myList.size); // 2
+console.log("New Head:", myList.head.data); // Chittagong
